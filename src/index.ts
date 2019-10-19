@@ -2,6 +2,10 @@ import express from 'express';
 import exphbs  from 'express-handlebars';
 import path    from 'path';
 
+
+//importing 
+import IndexRoutes from './routes/index';
+
 //Initialization
 const app = express();
 
@@ -16,14 +20,20 @@ app.set('.hbs', exphbs({
 }))
 
 
-//Middlewares
+//Middlewares min 35:47
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 
 //Routes
+app.use('/books', IndexRoutes});
+
 
 //Static files
+app.use(express.static(path.join(__dirname, 'public')));
+
 
 //Starting folder
-
+app.listen(app.get('port'), () => {
+    console.log(`Server on port ${app.get('port')}`)
+});
