@@ -4,6 +4,7 @@ import exphbs from 'express-handlebars';
 
 //importing 
 import IndexRoutes from './routes';
+import BookRoutes from './routes/books';
 
 //Initialization
 const app = express();
@@ -27,7 +28,8 @@ app.use(express.urlencoded({extended: false}));
 
 
 //Routes
-app.use('/books', IndexRoutes);
+app.use('/', IndexRoutes);
+app.use('/books', BookRoutes);
 
 
 //Static files
