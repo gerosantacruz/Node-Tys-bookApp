@@ -8,7 +8,7 @@ import BookRoutes from './routes/books';
 
 //Initialization
 const app = express();
-
+import './database'
 //setting
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views')); 

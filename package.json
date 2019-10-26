@@ -24,6 +24,7 @@
   "homepage": "https://github.com/gerosantacruz/Node-Tys-bookApp#readme",
   "dependencies": {
     "@types/express-handlebars": "0.0.33",
+    "@types/mongoose": "^5.5.23",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "mongoose": "^5.7.4"
