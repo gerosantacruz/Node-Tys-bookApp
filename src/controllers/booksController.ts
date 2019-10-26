@@ -13,6 +13,12 @@
              title: 'Add a Book'
          })
      }
+
+     public saveBook(req: Request, res: Response){
+         console.log(req.body);
+         res.send('recivied')
+     }
+
  }
 
  export const bookController = new BooksController;
